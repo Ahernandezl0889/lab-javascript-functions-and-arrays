@@ -1,5 +1,15 @@
 // Find the maximum
 
+function maxOfTwoNumbers (number1, number2)
+{
+  if(number1>number2){
+    return number1
+  }else{
+  return number2
+  }
+  
+}
+
 // Finding Longest Word
 var words = [
   'mystery',
@@ -10,14 +20,44 @@ var words = [
   'orchard',
   'crackpot'
 ];
+function findLongestWord(someArray){
+  if(someArray.length ===0){
+    return undefined;
+  }
+  let longest = "";
+  someArray.forEach((eachSingleWord)=>{
+    if(eachSingleWord.length > longest.length){
+      longest = eachSingleWord;
+    }
+  })
+  return longest;
+}
+
 
 // Calculating a Sum
 
 var numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+let sum =0;
+
+for (let i = 0; i < numbers.length; i++){
+sum +=numbers[i];
+}return sum;
 
 // Calculate the Average
-
 var numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+
+function averageNumber (numbersAvg){
+let su=0;
+let avg =0;
+for (let i = 0; i < numbersAvg.length; i++){
+  su+=numbersAvg[i];
+  }
+  avg =su /numbersAvg.length;
+  
+  }  return avg;
+  
+
+
 
 // Array of Strings
 var wordsArr = [
@@ -32,6 +72,18 @@ var wordsArr = [
   'fuel',
   'palace'
 ];
+function averageWordLength (){
+  let sum = 0
+  let avg = 0
+  wordsArr.forEach((word) =>{
+    sum += word.length;
+    i++;
+    avg = sum/i;
+    });
+  return avg;
+ }
+
+
 
 // Unique Arrays
 var wordsUnique = [
@@ -47,6 +99,15 @@ var wordsUnique = [
   'simple',
   'bring'
 ];
+function uniquifyArray(arr){
+  let newArray = [];
+   arr.forEach(()=> {
+     if (newArray.indexOf(eachWord)=== -1){
+       newArray.push(eachWord);
+     }
+   })
+   return newArray;
+}
 
 // Finding Elements
 var wordsFind = [
@@ -59,6 +120,19 @@ var wordsFind = [
   'truth',
   'disobedience'
 ];
+
+function doesWordExist(arrayOfWords, wordToSearchFor){
+ 
+  let result = false;
+   arrayOfWords.forEach((eachWord)=>{
+     if (eachWord === wordToSearch) {
+       return true;
+     }
+     
+     }
+   )
+   return result;
+ }
 
 // Counting Repetion
 var wordsCount = [
@@ -74,6 +148,15 @@ var wordsCount = [
   'disobedience',
   'matter'
 ];
+
+function howManyTimes (array, word){
+  let frecuency = 0;
+  array.forEach((eachWord)=>{
+    if(eachWord ===word){
+      frecuency += 1;
+    }
+  })
+}
 // Bonus Quest
 
 var matrix = [
